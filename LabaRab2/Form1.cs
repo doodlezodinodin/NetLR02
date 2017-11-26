@@ -39,10 +39,18 @@ namespace LabaRab2
         private void btnCount_Click(object sender, EventArgs e)
         {
             labelResult.Text = "Результат: ";
+            labelTime.Text = "Время выполнения программы: ";
+
             string num = "";
             int count = 0;
 
+            int? minNum = null;
+            int maxNum = 0;
+
             numberFile++;
+
+            System.Diagnostics.Stopwatch watch = new System.Diagnostics.Stopwatch();
+            watch.Start();
 
             for (int i=0; i<=richTextBox.TextLength-1; i++)
             {
@@ -51,32 +59,27 @@ namespace LabaRab2
                     if (num != "")
                     {
                         count++;
+                        if (maxNum < Convert.ToInt32(num)) maxNum = Convert.ToInt32(num);
+                        if (minNum == null) minNum = Convert.ToInt32(num);
+                        else if (minNum > Convert.ToInt32(num)) minNum = Convert.ToInt32(num);
                         num = "";
                     }    
                 } else if (richTextBox.Text[i] >= '0' && richTextBox.Text[i] <= '9') num+=richTextBox.Text[i];
             }
 
-            labelResult.Text = labelResult.Text + Convert.ToString(count) + " чисел.";
-
             using (StreamWriter sw = new StreamWriter(@"C:\Users\Hrankin Aleksandr\source\repos\NetLR02\LabaRab2\files\result\Result" + numberFile + ".txt", false, System.Text.Encoding.Default))
             {
                 sw.WriteLine(Convert.ToString(count));
             }
-        }
 
-        private void сохранитьФайлToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            /*if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                String FileName = saveFileDialog1.FileName;
-                FileStream myStream = new FileStream(FileName, FileMode.Create);
-                StreamWriter SW = new StreamWriter(myStream);
-                SW.Write(richTextBox.Text);
-                SW.Close();
-                myStream.Close();
-            }*/
-        }
+            watch.Stop();
+            var time = watch.Elapsed;
 
+            labelResult.Text = labelResult.Text + count + " чисел. Max number " + maxNum + ". Min number " + minNum;
+            labelTime.Text = labelTime.Text + time;
+
+            
+        }
         //*************************************************************************************************************
 
 
