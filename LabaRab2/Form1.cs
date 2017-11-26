@@ -38,33 +38,50 @@ namespace LabaRab2
 
         private void btnCount_Click(object sender, EventArgs e)
         {
+            numberFile++;
+
             labelResult.Text = "Результат: ";
             labelTime.Text = "Время выполнения программы: ";
+            labelWords.Text = "Слова в тексте: ";
 
-            string num = "";
+            string number = "";
+            string word = "";
+
             int count = 0;
 
             int? minNum = null;
             int maxNum = 0;
 
-            numberFile++;
-
             System.Diagnostics.Stopwatch watch = new System.Diagnostics.Stopwatch();
             watch.Start();
 
-            for (int i=0; i<=richTextBox.TextLength-1; i++)
+            for (int i=0; i <= richTextBox.TextLength-1; i++)
             {
                 if (richTextBox.Text[i] == ' ' || richTextBox.Text[i] == '\n' || richTextBox.Text[i] >= 'a' && richTextBox.Text[i] <= 'z')
                 {
-                    if (num != "")
+                    if (number != "")
                     {
                         count++;
-                        if (maxNum < Convert.ToInt32(num)) maxNum = Convert.ToInt32(num);
-                        if (minNum == null) minNum = Convert.ToInt32(num);
-                        else if (minNum > Convert.ToInt32(num)) minNum = Convert.ToInt32(num);
-                        num = "";
+                        if (maxNum < Convert.ToInt32(number)) maxNum = Convert.ToInt32(number);
+                        if (minNum == null) minNum = Convert.ToInt32(number);
+                        else if (minNum > Convert.ToInt32(number)) minNum = Convert.ToInt32(number);
+                        number = "";
                     }    
-                } else if (richTextBox.Text[i] >= '0' && richTextBox.Text[i] <= '9') num+=richTextBox.Text[i];
+                } else if (richTextBox.Text[i] >= '0' && richTextBox.Text[i] <= '9') number+=richTextBox.Text[i];
+            }
+
+            for (int i = 0; i <= richTextBox.TextLength-1; i++)
+            {
+                if (richTextBox.Text[i] >= 'a' && richTextBox.Text[i] <= 'z')
+                {
+                    word = word + richTextBox.Text[i];
+                } 
+
+                if (richTextBox.Text[i] == ' ' || richTextBox.Text[i] == '\n')
+                {
+                    labelWords.Text = labelWords.Text + word + ' ';
+                    word = "";
+                }
             }
 
             using (StreamWriter sw = new StreamWriter(@"C:\Users\Hrankin Aleksandr\source\repos\NetLR02\LabaRab2\files\result\Result" + numberFile + ".txt", false, System.Text.Encoding.Default))

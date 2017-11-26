@@ -38,6 +38,7 @@
             this.labelResult = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.labelTime = new System.Windows.Forms.Label();
+            this.labelWords = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
-            this.menuStrip1.Size = new System.Drawing.Size(690, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(612, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -78,9 +79,9 @@
             // 
             this.btnCount.Location = new System.Drawing.Point(526, 27);
             this.btnCount.Name = "btnCount";
-            this.btnCount.Size = new System.Drawing.Size(159, 26);
+            this.btnCount.Size = new System.Drawing.Size(80, 26);
             this.btnCount.TabIndex = 1;
-            this.btnCount.Text = "Количество чисел в тексте";
+            this.btnCount.Text = "Выполнить";
             this.btnCount.UseVisualStyleBackColor = true;
             this.btnCount.Click += new System.EventHandler(this.btnCount_Click);
             // 
@@ -116,11 +117,21 @@
             this.labelTime.TabIndex = 4;
             this.labelTime.Text = "Время выполнения программы: ";
             // 
+            // labelWords
+            // 
+            this.labelWords.AutoSize = true;
+            this.labelWords.Location = new System.Drawing.Point(15, 318);
+            this.labelWords.Name = "labelWords";
+            this.labelWords.Size = new System.Drawing.Size(90, 13);
+            this.labelWords.TabIndex = 5;
+            this.labelWords.Text = "Слова в тексте: ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 322);
+            this.ClientSize = new System.Drawing.Size(612, 345);
+            this.Controls.Add(this.labelWords);
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.richTextBox);
@@ -150,6 +161,7 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.Label labelTime;
+        private System.Windows.Forms.Label labelWords;
     }
 }
 
