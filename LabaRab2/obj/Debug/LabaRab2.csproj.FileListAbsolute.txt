@@ -8,3 +8,13 @@ c:\users\hrankin aleksandr\source\repos\LabaRab2\LabaRab2\obj\Debug\LabaRab2.csp
 c:\users\hrankin aleksandr\source\repos\LabaRab2\LabaRab2\obj\Debug\LabaRab2.csproj.CoreCompileInputs.cache
 c:\users\hrankin aleksandr\source\repos\LabaRab2\LabaRab2\obj\Debug\LabaRab2.exe
 c:\users\hrankin aleksandr\source\repos\LabaRab2\LabaRab2\obj\Debug\LabaRab2.pdb
+C:\Users\Hrankin Aleksandr\source\repos\NetLR02\LabaRab2\bin\Debug\LabaRab2.exe.config
+C:\Users\Hrankin Aleksandr\source\repos\NetLR02\LabaRab2\bin\Debug\LabaRab2.exe
+C:\Users\Hrankin Aleksandr\source\repos\NetLR02\LabaRab2\bin\Debug\LabaRab2.pdb
+C:\Users\Hrankin Aleksandr\source\repos\NetLR02\LabaRab2\obj\Debug\LabaRab2.csprojResolveAssemblyReference.cache
+C:\Users\Hrankin Aleksandr\source\repos\NetLR02\LabaRab2\obj\Debug\LabaRab2.Form1.resources
+C:\Users\Hrankin Aleksandr\source\repos\NetLR02\LabaRab2\obj\Debug\LabaRab2.Properties.Resources.resources
+C:\Users\Hrankin Aleksandr\source\repos\NetLR02\LabaRab2\obj\Debug\LabaRab2.csproj.GenerateResource.Cache
+C:\Users\Hrankin Aleksandr\source\repos\NetLR02\LabaRab2\obj\Debug\LabaRab2.csproj.CoreCompileInputs.cache
+C:\Users\Hrankin Aleksandr\source\repos\NetLR02\LabaRab2\obj\Debug\LabaRab2.exe
+C:\Users\Hrankin Aleksandr\source\repos\NetLR02\LabaRab2\obj\Debug\LabaRab2.pdb

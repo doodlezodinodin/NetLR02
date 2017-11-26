@@ -15,6 +15,8 @@ namespace LabaRab2
 {
     public partial class Form1 : Form
     {
+        private int numberFile = -1;
+
         public Form1()
         {
             InitializeComponent();
@@ -34,11 +36,13 @@ namespace LabaRab2
             }
         }
 
-        private void btnSum_Click(object sender, EventArgs e)
+        private void btnCount_Click(object sender, EventArgs e)
         {
             labelResult.Text = "Результат: ";
             string num = "";
             int count = 0;
+
+            numberFile++;
 
             for (int i=0; i<=richTextBox.TextLength-1; i++)
             {
@@ -48,21 +52,21 @@ namespace LabaRab2
                     {
                         count++;
                         num = "";
-                    }
-                    
+                    }    
                 } else if (richTextBox.Text[i] >= '0' && richTextBox.Text[i] <= '9') num+=richTextBox.Text[i];
             }
-            labelResult.Text = labelResult.Text + Convert.ToString(count) + " чисел.";
-        }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            richTextBox.Enabled = true;
+            labelResult.Text = labelResult.Text + Convert.ToString(count) + " чисел.";
+
+            using (StreamWriter sw = new StreamWriter(@"C:\Users\Hrankin Aleksandr\source\repos\NetLR02\LabaRab2\files\result\Result" + numberFile + ".txt", false, System.Text.Encoding.Default))
+            {
+                sw.WriteLine(Convert.ToString(count));
+            }
         }
 
         private void сохранитьФайлToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            /*if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 String FileName = saveFileDialog1.FileName;
                 FileStream myStream = new FileStream(FileName, FileMode.Create);
@@ -70,9 +74,11 @@ namespace LabaRab2
                 SW.Write(richTextBox.Text);
                 SW.Close();
                 myStream.Close();
-            }
+            }*/
         }
 
         //*************************************************************************************************************
+
+
     }
 }

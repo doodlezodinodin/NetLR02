@@ -31,14 +31,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.открытьФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сохранитьФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCount = new System.Windows.Forms.Button();
             this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.labelResult = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.сохранитьФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +69,19 @@
             this.открытьФайлToolStripMenuItem.Text = "Открыть файл";
             this.открытьФайлToolStripMenuItem.Click += new System.EventHandler(this.открытьФайлToolStripMenuItem_Click);
             // 
+            // сохранитьФайлToolStripMenuItem
+            // 
+            this.сохранитьФайлToolStripMenuItem.Name = "сохранитьФайлToolStripMenuItem";
+            this.сохранитьФайлToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.сохранитьФайлToolStripMenuItem.Text = "Сохранить файл";
+            this.сохранитьФайлToolStripMenuItem.Click += new System.EventHandler(this.сохранитьФайлToolStripMenuItem_Click);
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            // 
             // btnCount
             // 
             this.btnCount.Location = new System.Drawing.Point(526, 27);
@@ -78,7 +90,7 @@
             this.btnCount.TabIndex = 1;
             this.btnCount.Text = "Количество чисел в тексте";
             this.btnCount.UseVisualStyleBackColor = true;
-            this.btnCount.Click += new System.EventHandler(this.btnSum_Click);
+            this.btnCount.Click += new System.EventHandler(this.btnCount_Click);
             // 
             // richTextBox
             // 
@@ -103,35 +115,11 @@
             this.labelResult.TabIndex = 3;
             this.labelResult.Text = "Результат: ";
             // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(526, 212);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(159, 26);
-            this.btnEdit.TabIndex = 4;
-            this.btnEdit.Text = "Редактировать файл";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // сохранитьФайлToolStripMenuItem
-            // 
-            this.сохранитьФайлToolStripMenuItem.Name = "сохранитьФайлToolStripMenuItem";
-            this.сохранитьФайлToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.сохранитьФайлToolStripMenuItem.Text = "Сохранить файл";
-            this.сохранитьФайлToolStripMenuItem.Click += new System.EventHandler(this.сохранитьФайлToolStripMenuItem_Click);
-            // 
-            // оПрограммеToolStripMenuItem
-            // 
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
-            this.оПрограммеToolStripMenuItem.Text = "О программе";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 300);
-            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.richTextBox);
             this.Controls.Add(this.btnCount);
@@ -156,7 +144,6 @@
         private System.Windows.Forms.RichTextBox richTextBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label labelResult;
-        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.ToolStripMenuItem сохранитьФайлToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
